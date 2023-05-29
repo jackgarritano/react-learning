@@ -1,5 +1,6 @@
 import { useState, Fragment } from 'react';
 import './App.css';
+import Overview from './components/Overview';
 
 function App() {
   let [taskList, setTaskList] = useState([]);
@@ -7,7 +8,7 @@ function App() {
   return (
     <Fragment>
     <Input taskList={taskList} setTaskList={setTaskList}/>
-    <div>{taskList}</div>
+    <Overview tasks={taskList} />
     </Fragment>
   );
 }
